@@ -1,0 +1,67 @@
+/* Custom animations for Health Report Analyzer */
+
+/* Additional animation for elements that need special effects */
+.animated-pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Floating animation for certain elements */
+.animated-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Custom entrance animations that can be applied with data-aos */
+[data-aos="slide-up-fade"] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1),
+              opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+[data-aos="slide-up-fade"].aos-animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Custom animations for mobile devices */
+@media (max-width: 768px) {
+  [data-aos-delay] {
+    transition-delay: 0s !important;
+  }
+  
+  [data-aos] {
+    transition-duration: 600ms !important;
+  }
+}
+
+/* Smoother transitions for all elements with data-aos */
+[data-aos] {
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1.0) !important;
+}
