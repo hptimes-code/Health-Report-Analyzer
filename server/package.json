@@ -1,0 +1,34 @@
+{
+  "name": "health-analyzer-server",
+  "version": "1.0.0",
+  "description": "Backend server for Health Report Analyzer",
+  "main": "server.js",
+  "scripts": {
+    "start": "node --max-old-space-size=384 --optimize-for-size server.js",
+    "dev": "nodemon server.js",
+    "build": "echo 'No build step needed for server'"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "bcryptjs": "^2.4.3",
+    "compromise": "^14.14.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.21.2",
+    "fuzzy-search": "^3.2.1",
+    "jsonwebtoken": "^9.0.2",
+    "levenshtein-distance": "^0.0.2",
+    "mongodb-memory-server": "^10.2.1",
+    "mongoose": "^8.0.3",
+    "multer": "^1.4.5-lts.1",
+    "natural": "^8.1.0",
+    "nodemailer": "^7.0.5",
+    "pdf-parse": "^1.1.1",
+    "sharp": "^0.34.2",
+    "string-similarity": "^4.0.4",
+    "tesseract.js": "^5.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
